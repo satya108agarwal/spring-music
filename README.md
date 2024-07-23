@@ -93,6 +93,15 @@ $ cf bind-service <app name> <service name>
 $ cf restart
 ~~~
 
+#### Access cups params
+```bash
+curl https://spring-music-shiny-bushbuck-td.apps.dhaka.cf-app.com/cups/<SERVICE_INSTANCE_NAME>/<PARAM_NAME>
+    
+# eg. if the service instance name is oracle-db and param name is uri 
+    curl https://spring-music-shiny-bushbuck-td.apps.dhaka.cf-app.com/cups/oracle-db/uri --> returns "oracle://root:secret@dbserver.example.com:1521/mydatabase
+```
+
+
 #### Changing bound services
 
 To test the application with different services, you can simply stop the app, unbind a service, bind a different database service, and start the app:
