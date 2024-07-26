@@ -1,6 +1,6 @@
 ---
 applications:
-- name: spring-music-<EmpoyeeId> # Replace <EmpoyeeId> this unique id (Employee ID)
+- name: spring-music-<EmployeeId> # Replace the application name to include a unique ID to meet Cloud Foundry's requirement for unique app names.
   memory: 1G
   random-route: true
   instances: 1
