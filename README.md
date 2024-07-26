@@ -51,11 +51,17 @@ If more than one service containing any of these values is bound to the applicat
 
 After installing the 'cf' [command-line interface for Cloud Foundry](http://docs.cloudfoundry.org/cf-cli/), targeting a Cloud Foundry instance, and logging in, the application can be built and pushed using these commands:
 
+**Note**:
+
+- The application will be pushed using settings in the provided `manifest.yml` file. The output from the command will show the URL that has been assigned to the application.
+- Edit the manifest file to change the application name to include a unique ID (May be Org Employee ID) to meet Cloud Foundry's requirement for unique app names
 ~~~
+
+# Push the app to the platform
 $ cf push
 ~~~
 
-The application will be pushed using settings in the provided `manifest.yml` file. The output from the command will show the URL that has been assigned to the application.
+
 
 ### Creating and binding services
 
