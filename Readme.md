@@ -9,16 +9,8 @@ The application use Spring Java configuration and [bean profiles](http://docs.sp
 
 ## Building
 
-This project requires Java version 17 or later to compile.
+This project has been compiled an built with Java 17 and artifacts are checked in the repository
 
-> [!NOTE]
-> If you need to use an earlier Java version, check out the [`spring-boot-2` branch](https://github.com/cloudfoundry-samples/spring-music/tree/spring-boot-2), which can be built with Java 8 and later.
-
-To build a runnable Spring Boot jar file, run the following command:
-
-~~~
-$ ./gradlew clean assemble
-~~~
 
 ## Running the application locally
 
@@ -27,13 +19,14 @@ One Spring bean profile should be activated to choose the database provider that
 The application can be started locally using the following command:
 
 ~~~
-$ java -jar -Dspring.profiles.active=<profile> build/libs/spring-music-1.0.jar
+ java -jar -Dspring.profiles.active=<profile> build/libs/spring-music-1.0.jar
 ~~~
 
+**Note**: Edit the manifest.yml to have a unique app name. Append employeeId so the app name is unique across the foundation
 ~~~
 
 # Push the app to the platform
-$ cf push
+cf push
 ~~~
 
 
