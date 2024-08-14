@@ -35,7 +35,8 @@ cf push
 To create a user-provided service in Cloud Foundry with the name external_service and include username, password, and a URL, you can follow these steps:
 ```bash
 # replace <employeeId> with your employee id to create a dedicated service instance.
-cf create-user-provided-service external_service-<employeeId> -p '{"username":"example_user","password":"example_pass","url":"https://example.com/service"}'
+cf create-user-provided-service external_service-<employeeId> -p "{\"username\":\"example_user\",\"password\":\"example_pass\",\"url\":\"https://example.com/service\"}"
+
 
 # Note: Replace <your-app-name> with the app name configured in manifest.yml
 cf bind-service <your-app-name> external_service-<employeeId>
