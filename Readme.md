@@ -48,7 +48,9 @@ cf restart <your-app-name>
 # Note: if curl is not installed in your environment, use browser to test this
 # Note: if you don't recieve a response on curl, try adding -vvv to provide insights on the issue
 
+Use either curl or Chrome/IE to test this
 curl https://<random_route>/cups/external_service-<employeeId>/username
+
 ```
 
 ## Alternate Java versions
